@@ -11,31 +11,33 @@ public class Test {
 		list.add(new Student(10,37,"Nikhil","Akola"));  
 		list.add(new Student(8,18,"Raj","Mumbai"));  
 		
-		System.out.println("Sort By Id");
+		System.out.println("-------Sort By Id------");
 		
 		Collections.sort(list, new SortById());
 		
 		for(Student st:list) {
 			System.out.println(st.id+" "+st.age+" "+st.name+" "+st.address);
 		}
+		System.out.println("----------------");
 		
-        System.out.println("Sort By Age");
+        System.out.println("--------Sort By Age--------");
 		
 		Collections.sort(list, new SortByAge());
 		
 		for(Student st:list) {
 			System.out.println(st.id+" "+st.age+" "+st.name+" "+st.address);
 		}
+		System.out.println("-----------------");
 		
-        System.out.println("Sort By Name");
+        System.out.println("--------Sort By Name---------");
 		
 		Collections.sort(list, new SortByName());
 		
 		for(Student st:list) {
 			System.out.println(st.id+" "+st.age+" "+st.name+" "+st.address);
 		}
-		
-         System.out.println("Sort By Address");
+		System.out.println("---------------");
+         System.out.println("---------Sort By Address-----------");
 		
 		Collections.sort(list, new SortByAddress());
 		
