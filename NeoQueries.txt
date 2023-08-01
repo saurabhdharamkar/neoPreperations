@@ -1,0 +1,27 @@
+select  FIRST_NAME as NAME from worker ;
+
+select  UPPER(FIRST_NAME) as NAME from worker ;
+
+select distinct DEPARTMENT from worker;
+
+Select substring(FIRST_NAME,1,3) from Worker;
+
+Select INSTR(FIRST_NAME, BINARY'a') from Worker where FIRST_NAME = 'Amitabh';
+
+Select RTRIM(FIRST_NAME) from Worker;
+
+Select LTRIM(DEPARTMENT) from Worker;
+
+Select distinct length(DEPARTMENT) from Worker;
+
+Select REPLACE(FIRST_NAME,'a','A') from Worker;
+
+Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'COMPLETE_NAME' from Worker;
+
+Select * from Worker order by FIRST_NAME asc;
+
+Select * from Worker where FIRST_NAME in ('Vipul','Satish');
+
+Select * from Worker order by FIRST_NAME asc,DEPARTMENT desc;
+
+Select * from Worker where FIRST_NAME not in ('Vipul','Satish');
