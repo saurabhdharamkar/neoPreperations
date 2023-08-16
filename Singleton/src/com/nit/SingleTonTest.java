@@ -6,9 +6,6 @@ public class SingleTonTest {
 		Singleton sin=Singleton.getINSTANCE();
 		Singleton sin2=Singleton.getINSTANCE();
 		System.out.println(sin==sin2);
-		
-				
 
 	}
-
 }
