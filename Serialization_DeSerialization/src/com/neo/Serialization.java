@@ -11,7 +11,7 @@ class Serialization{
   ObjectOutputStream out=new ObjectOutputStream(fout);    
   out.writeObject(s1);    
   out.flush();    
-    
+  
   out.close();    
   System.out.println("success "+s1.toString());    
   }catch(Exception e){System.out.println(e);}    
