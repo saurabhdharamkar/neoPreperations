@@ -16,4 +16,18 @@ public interface EmployeeService {
 	public Employee getEmployeeById(int employeeId);
 	
 	public String deleteAllEmployees();
+	
+    public List<Employee> findByName(String name);
+	
+	public List<Employee> findByOrderByName();
+	
+	public List<Employee> findByOrderByNameDesc();
+	
+	public List<Employee> findByAddress(String address);
+	
+	public List<Employee>  findByOrderByAddress();
+	
+	public Employee findByAge(String age);
+	
+	public List<Employee> findByOrderByAge();
 }

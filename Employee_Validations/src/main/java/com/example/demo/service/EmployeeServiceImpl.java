@@ -49,4 +49,41 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return "All Employees are Deleted";
 	}
 
+	@Override
+	public List<Employee> findByName(String name) {
+		return empRepo.findByName(name);
+	}
+
+	@Override
+	public List<Employee> findByOrderByName() {
+		return empRepo.findByOrderByName();
+	}
+	
+	@Override
+	public List<Employee> findByOrderByNameDesc() {
+		return empRepo.findByOrderByNameDesc();
+	}
+
+	@Override
+	public List<Employee> findByAddress(String address) {
+		return empRepo.findByAddress(address);
+	}
+
+	@Override
+	public List<Employee> findByOrderByAddress() {
+		return empRepo.findByOrderByAddress();
+	}
+
+	@Override
+	public Employee findByAge(String age) {
+		return empRepo.findByAge(age);
+	}
+
+	@Override
+	public List<Employee> findByOrderByAge() {
+		return empRepo.findByOrderByAge();
+	}
+
+	
+
 }

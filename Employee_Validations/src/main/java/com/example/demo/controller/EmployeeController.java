@@ -114,5 +114,42 @@ public class EmployeeController {
 		return resp;
 	}
 	
+	@GetMapping("/findByName/{name}")
+	public ResponseEntity<List<Employee>> findByName(@PathVariable String name){
+		ResponseEntity<List<Employee>> resp=null;
+		try {
+			List<Employee> emps=employeeService.findByName(name);
+			resp=new ResponseEntity<List<Employee>>(emps,HttpStatus.OK);
+		}catch(Exception e) {
+			e.printStackTrace();
+			resp=new ResponseEntity<List<Employee>>(HttpStatus.NOT_FOUND);
+		}
+		return resp;
+	}
+	
+	@GetMapping("/findByOrderByName")
+	public ResponseEntity<List<Employee>> findByOrderByName(){
+		ResponseEntity<List<Employee>>  resp=null;
+		try {
+			resp=new ResponseEntity<List<Employee>>(employeeService.findByOrderByName(),HttpStatus.OK);
+		}catch(Exception e) {
+			e.printStackTrace();
+			resp=new ResponseEntity<List<Employee>>(HttpStatus.NOT_FOUND);
+		}
+		return resp;
+	}
+	
+	@GetMapping("/findByOrderByNameDesc")
+	public ResponseEntity<List<Employee>> findByOrderByNameDesc(){
+		ResponseEntity<List<Employee>>  resp=null;
+		try {
+			resp=new ResponseEntity<List<Employee>>(employeeService.findByOrderByNameDesc(),HttpStatus.OK);
+		}catch(Exception e) {
+			e.printStackTrace();
+			resp=new ResponseEntity<List<Employee>>(HttpStatus.NOT_FOUND);
+		}
+		return resp;
+	}
+	
 
 }
